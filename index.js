@@ -4,7 +4,7 @@ const searchInput = document.querySelector("#search-input");
 
 let breweries = [];
 
-/* EVENT 1 — submit (fetch) */
+/* EVENT 1 — page load */
 document.addEventListener("DOMContentLoaded", fetchBreweries);
 
 /* EVENT 2 — input (filter) */
@@ -27,7 +27,7 @@ function renderBreweries(breweryArray) {
     const li = document.createElement("li");
     li.textContent = brewery.name;
 
-    /* EVENT 3 — click (select) */
+    /* EVENT 3 — click */
     li.addEventListener("click", () => showDetails(brewery));
 
     list.appendChild(li);
